@@ -69,7 +69,7 @@ insert into "word" (Name, Translator, GroupId) values ('orange', 'laranja', 3);
 insert into "word" (Name, Translator, GroupId) values ('pink', 'rosa', 3); 
 insert into "word" (Name, Translator, GroupId) values ('purple', 'roxo', 3); 
 insert into "word" (Name, Translator, GroupId) values ('red', 'vermelho', 3); 
-insert into "word" (Name, Translator, GroupId) values ('write', 'branco', 3); 
+insert into "word" (Name, Translator, GroupId) values ('white', 'branco', 3); 
 insert into "word" (Name, Translator, GroupId) values ('yellow', 'amarelo', 3); 
 
 insert into "group" (GroupId, Name, Translator) values (4, 'fruits', 'frutas'); 
