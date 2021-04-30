@@ -19,13 +19,13 @@ namespace Trainnig.My.English.Console
 
                 foreach (var group in groups)
                 {
-                    insertGroupsAndWords += $"insert \"groups\" values (GroupId, Name, Translator) values ({group.GroupId}, '{group.Name}', '{group.Translator}') \n\n";
+                    insertGroupsAndWords += $"insert into \"group\" (GroupId, Name, Translator) values ({group.GroupId}, '{group.Name}', '{group.Translator}'); \n\n";
 
                     var words = con.Query<Word>($"select * from \"word\" where groupid = {group.GroupId} order by name, groupid").ToList();
 
                     foreach (var word in words)
                     {
-                        insertGroupsAndWords += $"insert \"word\" values (Name, Translator, Groupid) values ('{word.Name}', '{word.Translator}', {word.GroupId}) \n";
+                        insertGroupsAndWords += $"insert into \"word\" (Name, Translator, GroupId) values ('{word.Name}', '{word.Translator}', {word.GroupId}); \n";
 
                         if (words.Last() == word)
                             insertGroupsAndWords += "\n";
